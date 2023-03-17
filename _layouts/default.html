@@ -1,14 +1,17 @@
-<!DOCTYPE HTML>
-<!--
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-Jekyll integration by Chris Bobbe | chrisbobbe.github.io
--->
-<html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
+{% include head.html %}
+
+<body class="home-template">
+    <div class="site-wrapper">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
+</body>
+
+{% include global.html %}
 </html>

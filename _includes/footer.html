@@ -1,13 +1,5 @@
-<!-- Footer -->
-<div id="footer">
-  
-  <!-- Copyright -->
-  <ul class="copyright">
-    {% if site.title or site.author %}
-      <li>&copy; {{- site.title | default: site.author -}}. All rights reserved.</li>
-    {% endif %}
-    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    <li>Jekyll integration: <a href="https://chrisbobbe.github.io/">Chris Bobbe</a></li>
-  </ul>
-  
-</div>
+<footer class="site-footer">
+    <button class="go-to-top"></button>
+    <p class="copyright"><a href="{{ "" | absolute_url }}" title="{{ site.title }}">{{site.title}}</a> &copy; {{ site.time | date: '%Y' }} | <a href="{{ "/feed.xml" | absolute_url }}" title="RSS Feed">RSS Feed</a></p>
+    <p class="poweredby">powered by <a href="https://jekyllrb.com/" title="Jekyll">Jekyll</a> with the <a href="https://github.com/jwillmer/jekyllDecent" title="jekyllDecent Theme">jekyllDecent</a> theme</p>
+</footer>

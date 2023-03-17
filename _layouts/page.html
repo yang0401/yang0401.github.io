@@ -1,18 +1,16 @@
 ---
 layout: default
 ---
-{%- include header.html -%}
+<main class="content" role="main">
+    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header short-diver">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>           
+        </header>
+        <section class="post-content short-diver" itemprop="articleBody">
+            {{content}}
+        </section>
+    </article>
+</main>
 
-<!-- Main -->
-<div id="main">
-	<!-- Page -->
-	<article class="shade-two">
-	  <div class="container">
-			<header>
-				<h2>{{- page.title -}}</h2>
-				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
-			</header>
-	    {{- content -}}
-	  </div>
-	</article>
-</div>
+{% include photoswipe.html %}
+{% include post_scripts.html %}
